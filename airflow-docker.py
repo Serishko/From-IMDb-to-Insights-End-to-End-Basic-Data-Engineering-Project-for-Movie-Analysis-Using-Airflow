@@ -18,8 +18,8 @@ query = [
      """create or replace temporary stage imdb_stage
         file_format = (type = json)
         credentials = (
-        aws_key_id = 'AKIAYL7VLA3G2MZZPBF4',
-        aws_secret_key = 'fuQ5ya91xjYdZ4X0nTrHYf6GXJLA4RX7/3qt1UBM'
+        aws_key_id = '',
+        aws_secret_key = ''
         )
         url = 's3://imdb-json-data/imdb.json';
         
@@ -110,7 +110,7 @@ def scrape():
     #Write the JSON string to a file named 'imdb.json'
 
 def upload():
-    client = boto3.client('s3', aws_access_key_id = 'AKIAYL7VLA3G4J2COI4M', region_name = 'ca-central-1', aws_secret_access_key='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')
+    client = boto3.client('s3', aws_access_key_id = '', region_name = '', aws_secret_access_key='')
 
     with open(r'/opt/airflow/files/imdb.json','rb') as file:
         client.upload_fileobj(file, 'imdb-json-data', 'imdb.json')
