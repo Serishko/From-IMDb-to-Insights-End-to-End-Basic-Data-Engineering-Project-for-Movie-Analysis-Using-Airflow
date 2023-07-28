@@ -16,6 +16,10 @@
 
 The top 250 IMDb movies are extracted from the IMDb website based on ratings using Beautiful Soup as the web scraping tool. The resulting data is stored as a JSON file, which is then uploaded to an AWS S3 bucket for storage. From the S3 bucket, the JSON file is retrieved and integrated into Snowflake, a cloud-based data warehousing platform. Utilizing SQL queries within Snowflake, the JSON data is transformed. All the above steps are done using Airflow as an orchestrator. A CSV file is then generated from Snowflake as the final result. This CSV file is subsequently downloaded to the local machine, where it can be accessed for further analysis and processing. Finally, the downloaded CSV file is imported into Tableau, a data visualization and analytics tool, enabling the creation of data-driven visualizations and interactive dashboards.
 
+## DAG Run
+
+![1](https://github.com/Serishko/From-IMDb-to-Insights-End-to-End-Basic-Data-Engineering-Project-for-Movie-Analysis-Using-Airflow/assets/58653229/ca5d1a18-6383-4fd8-9402-4f3f5f8196b6)
+
 ## Dashboard
 
 ![image](https://github.com/Serishko/data-enngineering-project/assets/58653229/6047cf2b-aa24-4ef4-8935-9d13796a2911)
